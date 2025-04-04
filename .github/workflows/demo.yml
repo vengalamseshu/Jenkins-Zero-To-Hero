@@ -6,7 +6,10 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
-      - name: print-sweet
+  display:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display-step
         run: echo "Hello Pilla..!!"
 
         
