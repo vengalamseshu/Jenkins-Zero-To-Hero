@@ -10,6 +10,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: display-step
-        run: echo ""Ecevution policy " get-ExecutionPolicy
+        run: echo ""Ecevution policy " Get-ExecutionPolicy
 
         
