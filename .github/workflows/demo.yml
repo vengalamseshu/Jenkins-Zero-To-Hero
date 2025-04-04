@@ -11,5 +11,9 @@ jobs:
     steps:
       - name: display-step
         run: echo ""Ecevution policy " Get-ExecutionPolicy
-
-        
+  child-plan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: calling-child-plan
+      Build:
+        uses: chiled1.yml     
