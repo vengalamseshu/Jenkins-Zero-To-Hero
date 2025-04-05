@@ -16,4 +16,4 @@ jobs:
     steps:
     - name: calling-child-plan
       Build:
-        uses: chiled1.yml     
+        uses: child1.yml     
