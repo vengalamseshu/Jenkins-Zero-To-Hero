@@ -1,11 +1,5 @@
 name: child-flow
-on:
-  workflow_call:
-    inputs:
-      branch-to-build:
-        description: "Branch to build"
-        required: true
-        type: string
+on: workflow_call
 jobs:
   ch-job:
     runs-on: ubuntu-latest
