@@ -1,6 +1,8 @@
 name: hello-world
 on: push
 jobs:
+  Build:
+    uses: .github/workflows/child1.yml@main
   my-job:
     runs-on: ubuntu-latest
     steps:
@@ -10,10 +12,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: display-step
-        run: echo ""Ecevution policy " Get-ExecutionPolicy
-  child-plan:
-    runs-on: ubuntu-latest
-    steps:
-    - name: calling-child-plan
-      Build:
-        uses: child1.yml     
+        run: echo ""Ecevution policy "
