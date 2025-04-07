@@ -3,6 +3,8 @@ on: push
 jobs:
   my-job:
     runs-on: ubuntu-latest
+    outputs:
+      BRANCH_TO_BUILD: ${{ steps.set-input.outputs.BRANCH_TO_BUILD }}
     steps:
       - name: Get current branch name
         id: branch-name
@@ -19,4 +21,4 @@ jobs:
     needs: [ "my-job" ]
     uses: vengalamseshu/Jenkins-Zero-To-Hero/.github/workflows/child1.yml@main
     with:
-      branch-to-build: ${{ env.branch }}
+      branch-to-build: ${{ needs.prepare-env.outputs.BRANCH_TO_BUILD }}
