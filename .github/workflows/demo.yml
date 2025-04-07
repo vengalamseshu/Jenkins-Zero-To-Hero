@@ -16,6 +16,7 @@ jobs:
       - name: display-step
         run: echo ""Ecevution policy "
   Build:
+    needs: [ "my-job" ]
     uses: vengalamseshu/Jenkins-Zero-To-Hero/.github/workflows/child1.yml@main
     with:
       branch-to-build: ${{ env.branch }}
